@@ -414,3 +414,117 @@ header {
     background: var(--brown-color);
 }
 /* categories */
+/* books-slider */
+.books-slider {
+    padding: 65px 0 119px;
+    background: var(--brown-color);
+}
+.books-slider__header h2,
+.books-slider__header a {
+    color: #ffffff;
+}
+.books-slider__header {
+    margin-bottom: 55px;
+}
+/* books-slider */
+/* swiper-controls */
+.slider {
+    position: relative;
+}
+.swiper-controls {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    top: 50%;
+    left: -11%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 122%;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    margin-top: 0;
+}
+.swiper-button-next:after {
+    color: var(--red-color);
+}
+.swiper-button-prev:after {
+    color: var(--yellow-color);
+}
+.swiper-button-next {
+    background: #ffffff;
+}
+.swiper-button-prev {
+    background: var(--green-color);
+}
+/* swiper-controls */
+/* footer */
+footer {
+    background: var(--green-color);
+    padding: 52px 0;
+}
+.footer__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.footer__apps {
+    grid-row: span 2;
+}
+.footer__link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 21px;
+    width: 33%;
+}
+.footer__link:nth-child(3),
+.footer__link:nth-child(6) {
+    text-align: right;
+}
+.footer__link:nth-child(2),
+.footer__link:nth-child(5) {
+    text-align: center;
+}
+.footer__nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 687px;
+}
+.footer__apps {
+
+}
+.apps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.apps__title {
+    font-size: 21px;
+    color: #ffffff;
+}
+.socials {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.socials__title {
+    width: 100%;
+    font-size: 21px;
+    color: #ffffff;
+}
+.socials__link {
+    font-size: 0;
+}
+.footer__socials {
+    width: 362px;
+}
+/* footer */

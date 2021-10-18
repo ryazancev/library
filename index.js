@@ -1,22 +1,18 @@
-const path = require('path');
-const fs = require('fs');
-const { Parser, transforms: { unwind } } = require('json2csv');
+import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
 
-fs.readFile(path.join(__dirname, '/','books.jsn'), 'utf-8', (err, content) => {
-    if (err) throw new Error(err);
-    const data = JSON.parse(content);
-    const fields = [];
+const initSlider = () => {
+    const mainSlider = new Swiper('.slider .swiper', {
+        navigation: {
+            nextEl: '.slider .swiper-button-next',
+            prevEl: '.slider .swiper-button-prev'
+        },
+        autoplay: {
+            delay: 3000
+        },
+        spaceBetween: 30,
+        loop: true,
+        slidesPerView: 4
 
-    for (let key in data[0]) {
-        fields.push(key)
-    }
-
-
-    const transforms = [unwind({paths: ['libraryAvailability']})]
-    const json2csvParser = new Parser();
-    const csv = json2csvParser.parse(data);
-
-    fs.writeFile(path.join(__dirname, '/', 'books.csv'), csv, (err) => {
-        if (err) throw new Error(err)
-    });
-});
+    })
+};
+initSlider();
