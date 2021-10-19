@@ -33,29 +33,30 @@
     </div>
 </header>
 <main>
-    <section class="hero">
+    <section class="user-lk">
         <div class="content">
-            <div class="hero__wrapper">
-                <h1>Бибилиотеки москвы</h1>
-                <p class="hero__subtitle">
-                    находите и бронируйте любимые книги прямо из дома
-                </p>
-                <p class="hero__image">
-                    <img src="./images/hero.png" alt="Логотип сайта" width="421">
-                </p>
+            <h1>Личный кабинет</h1>
+            <div class="tabs">
+                <div class="tabs__buttons">
+                    <button class="tabs__button" data-tab="profile">Профиль</button>
+                    <button class="tabs__button" data-tab="history">История</button>
+                    <button class="tabs__button" data-tab="favorites">Избранное</button>
+                </div>
+                <div class="tabs__content user-profile" data-content="profile">
+                    <img src="./images/ava.jpg" alt="Иванов Иван">
+                    <input type="text" class="user-profile__name" value="Иван Иванов" disabled>
+                    <label for="birthdate">Дата рождения:</label>
+                    <input type="date" class="user-profile__birthdate" id="birthdate" value="25.10.1997" disabled>
+                    <label for="genre">Любимые жанры:</label>
+                    <input type="text" class="user-profile__genre" id="genre" value="Русская классическая литература, Фентези, Зарубежная классика" disabled>
+                    <label for="authors">Любимые авторы:</label>
+                    <input type="text" class="user-profile__birthdate" id="authors" value="А.С. Пушкин, А.П. Чехов" disabled>
+                    <button type="submit" class="button user-profile__button">Изменить</button>
+                </div>
             </div>
         </div>
     </section>
-    <section class="search content">
-        <div class="search__content">
-            <form class="search__form" action="/" method="get" id="search">
-                <input class="search__input" type="search" placeholder="Название, серия, автор, издательство">
-                <button class="button search__submit" type="submit">Найти</button>
-            </form>
-            <a href="/lk" class="button lk-link js-lk">Личный кабинет</a>
-        </div>
-    </section>
-    <section class="books">
+    <section class="books favorites-book">
         <div class="content">
             <div class="books__header section-header">
                 <h2>Выбор читателей</h2>
@@ -199,143 +200,6 @@
                     </button>
                 </article>
             </div>
-        </div>
-    </section>
-    <section class="categories">
-        <div class="content">
-            <div class="section-header categories__header">
-                <h2>Подборки на любой вкус</h2>
-                <a href="/">Смотреть все</a>
-            </div>
-            <div class="categories__wrapper">
-                <article class="plate categories__item">
-                    <p class="plate__title">
-                        Зарубежные классики
-                    </p>
-                    <a href="/" class="plate__link">Смотреть все</a>
-                </article>
-                <article class="plate categories__item">
-                    <p class="plate__title">
-                        Зарубежные классики
-                    </p>
-                    <a href="/" class="plate__link">Смотреть все</a>
-                </article>
-                <article class="plate categories__item">
-                    <p class="plate__title">
-                        Зарубежные классики
-                    </p>
-                    <a href="/" class="plate__link">Смотреть все</a>
-                </article>
-                <article class="plate categories__item">
-                    <p class="plate__title">
-                        Зарубежные классики
-                    </p>
-                    <a href="/" class="plate__link">Смотреть все</a>
-                </article>
-                <article class="plate categories__item">
-                    <p class="plate__title">
-                        Зарубежные классики
-                    </p>
-                    <a href="/" class="plate__link">Смотреть все</a>
-                </article>
-                <article class="plate categories__item">
-                    <p class="plate__title">
-                        Зарубежные классики
-                    </p>
-                    <a href="/" class="plate__link">Смотреть все</a>
-                </article>
-            </div>
-        </div>
-    </section>
-    <section class="books-slider">
-        <div class="content">
-            <div class="books-slider__header section-header">
-                <h2>Вам может понравится</h2>
-                <a href="/">Смотреть все</a>
-            </div>
-            <div class="slider">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <article class="swiper-slide book">
-                            <div class="book__thumb">
-                                <img src="./images/Chelovek-Pikasso-big.jpg"
-                                     alt="Обложка книги Человек, который стал Пикассо">
-                            </div>
-                            <div class="book__content">
-                                <p class="book__title">
-                                    Человек, который стал Пикассо
-                                </p>
-                                <p class="book__author">
-                                    Бернадак Мари-Лор
-                                </p>
-                            </div>
-                            <a class="book__link" href="/"></a>
-                            <button type="button" class="book__favorite">
-                                Добавить в избранное
-                            </button>
-                        </article>
-                        <article class="swiper-slide book">
-                            <div class="book__thumb">
-                                <img src="./images/Chelovek-Pikasso-big.jpg"
-                                     alt="Обложка книги Человек, который стал Пикассо">
-                            </div>
-                            <div class="book__content">
-                                <p class="book__title">
-                                    Человек, который стал Пикассо
-                                </p>
-                                <p class="book__author">
-                                    Бернадак Мари-Лор
-                                </p>
-                            </div>
-                            <a class="book__link" href="/"></a>
-                            <button type="button" class="book__favorite">
-                                Добавить в избранное
-                            </button>
-                        </article>
-                        <article class="swiper-slide book">
-                            <div class="book__thumb">
-                                <img src="./images/Chelovek-Pikasso-big.jpg"
-                                     alt="Обложка книги Человек, который стал Пикассо">
-                            </div>
-                            <div class="book__content">
-                                <p class="book__title">
-                                    Человек, который стал Пикассо
-                                </p>
-                                <p class="book__author">
-                                    Бернадак Мари-Лор
-                                </p>
-                            </div>
-                            <a class="book__link" href="/"></a>
-                            <button type="button" class="book__favorite">
-                                Добавить в избранное
-                            </button>
-                        </article>
-                        <article class="swiper-slide book">
-                            <div class="book__thumb">
-                                <img src="./images/Chelovek-Pikasso-big.jpg"
-                                     alt="Обложка книги Человек, который стал Пикассо">
-                            </div>
-                            <div class="book__content">
-                                <p class="book__title">
-                                    Человек, который стал Пикассо
-                                </p>
-                                <p class="book__author">
-                                    Бернадак Мари-Лор
-                                </p>
-                            </div>
-                            <a class="book__link" href="/"></a>
-                            <button type="button" class="book__favorite">
-                                Добавить в избранное
-                            </button>
-                        </article>
-                    </div>
-                </div>
-                <div class="swiper-controls">
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            </div>
-
         </div>
     </section>
 </main>
