@@ -16,3 +16,17 @@ const initSlider = () => {
     })
 };
 initSlider();
+
+const addFavorite = () => {
+    const books = document.querySelector('.books');
+
+    const fillHeart = (e) => {
+        const target = e.target;
+        if (target.matches('.book__favorite')) {
+            target.classList.toggle('active')
+        }
+    };
+
+    books.addEventListener('click', fillHeart)
+};
+addFavorite();
