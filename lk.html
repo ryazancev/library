@@ -19,7 +19,7 @@
             <a class="header__link" href="/">Библиотеки Москвы</a>
         </div>
         <nav class="header__nav nav-site">
-            <a class="header__link nav-site__item nav-site__item--active" href="/">Главная</a>
+            <a class="header__link nav-site__item" href="/">Главная</a>
             <a class="header__link nav-site__item" href="/">Подборки</a>
             <a class="header__link nav-site__item" href="/">Читательский билет</a>
             <a class="header__link nav-site__item" href="/">О сервисе</a>
@@ -27,7 +27,7 @@
         <a href="#search" class="header__search header__link">
             Поиск
         </a>
-        <a href="/lk.html" class="header__lk lk header__link js-lk">
+        <a href="/lk.html" class="header__lk lk lk--active header__link js-lk">
             Личный кабинет
         </a>
     </div>
@@ -38,29 +38,128 @@
             <h1>Личный кабинет</h1>
             <div class="tabs">
                 <div class="tabs__buttons">
-                    <button class="tabs__button" data-tab="profile">Профиль</button>
-                    <button class="tabs__button" data-tab="history">История</button>
-                    <button class="tabs__button" data-tab="favorites">Избранное</button>
+                    <button class="tabs__button tabs__button--profile active" data-tab="profile">Профиль</button>
+                    <button class="tabs__button tabs__button--history" data-tab="history">История</button>
                 </div>
-                <div class="tabs__content user-profile" data-content="profile">
+                <div class="tabs__content user-profile active" data-content="profile">
                     <img src="./images/ava.jpg" alt="Иванов Иван">
-                    <input type="text" class="user-profile__name" value="Иван Иванов" disabled>
-                    <label for="birthdate">Дата рождения:</label>
-                    <input type="date" class="user-profile__birthdate" id="birthdate" value="25.10.1997" disabled>
-                    <label for="genre">Любимые жанры:</label>
-                    <input type="text" class="user-profile__genre" id="genre" value="Русская классическая литература, Фентези, Зарубежная классика" disabled>
-                    <label for="authors">Любимые авторы:</label>
-                    <input type="text" class="user-profile__birthdate" id="authors" value="А.С. Пушкин, А.П. Чехов" disabled>
-                    <button type="submit" class="button user-profile__button">Изменить</button>
+                    <div class="user-profile__wrapper">
+                        <p class="user-profile__value user-profile__name">Иван Иванов</p>
+                        <div class="user-profile__item">
+                            <span class="user-profile__title">Дата рождения:</span>
+                            <span class="user-profile__value">25 апреля 1997г</span>
+                        </div>
+                        <div class="user-profile__item">
+                            <span class="user-profile__title">Любимые жанры:</span>
+                            <span class="user-profile__value">Русская классическая литература, Фентези, Зарубежная классика</span>
+                        </div>
+                        <div class="user-profile__item">
+                            <span class="user-profile__title">Любимые авторы:</span>
+                            <span class="user-profile__value">А.С. Пушкин, А.П. Чехов</span>
+                        </div>
+
+                        <button type="submit" class="button user-profile__button">Изменить</button>
+                    </div>
+                </div>
+                <div class="tabs__content user-history" data-content="history">
+                    <div class="user-history__book">
+                        <img src="./images/Chelovek-Pikasso-big.jpg" alt="">
+                        <div class="user-history__wrapper">
+                            <p class="user-history__title">Человек, которй стал Пикассо</p>
+                            <div class="user-history__item">
+                                <span class="user-history__title">Автор:</span>
+                                <span class="user-history__value">Бернадак Мари-Лор</span>
+                            </div>
+                            <div class="user-history__item">
+                                <span class="user-history__title">Библиотека:</span>
+                                <span class="user-history__value">Российская Государственная библиотека</span>
+                            </div>
+                            <div class="user-history__item">
+                                <span class="user-history__title">Адрес:</span>
+                                <span class="user-history__value">119019, Москва, ул. Воздвиженка, 3/5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-history__book">
+                        <img src="./images/Chelovek-Pikasso-big.jpg" alt="">
+                        <div class="user-history__wrapper">
+                            <p class="user-history__title">Человек, которй стал Пикассо</p>
+                            <div class="user-history__item">
+                                <span class="user-history__title">Автор:</span>
+                                <span class="user-history__value">Бернадак Мари-Лор</span>
+                            </div>
+                            <div class="user-history__item">
+                                <span class="user-history__title">Библиотека:</span>
+                                <span class="user-history__value">Российская Государственная библиотека</span>
+                            </div>
+                            <div class="user-history__item">
+                                <span class="user-history__title">Адрес:</span>
+                                <span class="user-history__value">119019, Москва, ул. Воздвиженка, 3/5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-history__book">
+                        <img src="./images/Chelovek-Pikasso-big.jpg" alt="">
+                        <div class="user-history__wrapper">
+                            <p class="user-history__title">Человек, которй стал Пикассо</p>
+                            <div class="user-history__item">
+                                <span class="user-history__title">Автор:</span>
+                                <span class="user-history__value">Бернадак Мари-Лор</span>
+                            </div>
+                            <div class="user-history__item">
+                                <span class="user-history__title">Библиотека:</span>
+                                <span class="user-history__value">Российская Государственная библиотека</span>
+                            </div>
+                            <div class="user-history__item">
+                                <span class="user-history__title">Адрес:</span>
+                                <span class="user-history__value">119019, Москва, ул. Воздвиженка, 3/5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-history__book">
+                        <img src="./images/Chelovek-Pikasso-big.jpg" alt="">
+                        <div class="user-history__wrapper">
+                            <p class="user-history__title">Человек, которй стал Пикассо</p>
+                            <div class="user-history__item">
+                                <span class="user-history__title">Автор:</span>
+                                <span class="user-history__value">Бернадак Мари-Лор</span>
+                            </div>
+                            <div class="user-history__item">
+                                <span class="user-history__title">Библиотека:</span>
+                                <span class="user-history__value">Российская Государственная библиотека</span>
+                            </div>
+                            <div class="user-history__item">
+                                <span class="user-history__title">Адрес:</span>
+                                <span class="user-history__value">119019, Москва, ул. Воздвиженка, 3/5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-history__book">
+                        <img src="./images/Chelovek-Pikasso-big.jpg" alt="">
+                        <div class="user-history__wrapper">
+                            <p class="user-history__title">Человек, которй стал Пикассо</p>
+                            <div class="user-history__item">
+                                <span class="user-history__title">Автор:</span>
+                                <span class="user-history__value">Бернадак Мари-Лор</span>
+                            </div>
+                            <div class="user-history__item">
+                                <span class="user-history__title">Библиотека:</span>
+                                <span class="user-history__value">Российская Государственная библиотека</span>
+                            </div>
+                            <div class="user-history__item">
+                                <span class="user-history__title">Адрес:</span>
+                                <span class="user-history__value">119019, Москва, ул. Воздвиженка, 3/5</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="books favorites-book">
         <div class="content">
-            <div class="books__header section-header">
-                <h2>Выбор читателей</h2>
-                <a href="/">Смотреть все</a>
+            <div class="favorites-book__header section-header">
+                <h2>Избранное</h2>
             </div>
             <div class="books__wrapper">
                 <article class="book books__item">
@@ -76,24 +175,7 @@
                         </p>
                     </div>
                     <a class="book__link" href="/"></a>
-                    <button type="button" class="book__favorite">
-                        Добавить в избранное
-                    </button>
-                </article>
-                <article class="book books__item">
-                    <div class="book__thumb">
-                        <img src="./images/Chelovek-Pikasso-big.jpg" alt="Обложка книги Человек, который стал Пикассо">
-                    </div>
-                    <div class="book__content">
-                        <p class="book__title">
-                            Человек, который стал Пикассо
-                        </p>
-                        <p class="book__author">
-                            Бернадак Мари-Лор
-                        </p>
-                    </div>
-                    <a class="book__link" href="/"></a>
-                    <button type="button" class="book__favorite">
+                    <button type="button" class="book__favorite active">
                         Добавить в избранное
                     </button>
                 </article>
@@ -127,7 +209,7 @@
                         </p>
                     </div>
                     <a class="book__link" href="/"></a>
-                    <button type="button" class="book__favorite">
+                    <button type="button" class="book__favorite active">
                         Добавить в избранное
                     </button>
                 </article>
@@ -144,7 +226,7 @@
                         </p>
                     </div>
                     <a class="book__link" href="/"></a>
-                    <button type="button" class="book__favorite">
+                    <button type="button" class="book__favorite active">
                         Добавить в избранное
                     </button>
                 </article>
@@ -161,7 +243,7 @@
                         </p>
                     </div>
                     <a class="book__link" href="/"></a>
-                    <button type="button" class="book__favorite">
+                    <button type="button" class="book__favorite active">
                         Добавить в избранное
                     </button>
                 </article>
@@ -178,7 +260,7 @@
                         </p>
                     </div>
                     <a class="book__link" href="/"></a>
-                    <button type="button" class="book__favorite">
+                    <button type="button" class="book__favorite active">
                         Добавить в избранное
                     </button>
                 </article>
@@ -195,7 +277,24 @@
                         </p>
                     </div>
                     <a class="book__link" href="/"></a>
-                    <button type="button" class="book__favorite">
+                    <button type="button" class="book__favorite active">
+                        Добавить в избранное
+                    </button>
+                </article>
+                <article class="book books__item">
+                    <div class="book__thumb">
+                        <img src="./images/Chelovek-Pikasso-big.jpg" alt="Обложка книги Человек, который стал Пикассо">
+                    </div>
+                    <div class="book__content">
+                        <p class="book__title">
+                            Человек, который стал Пикассо
+                        </p>
+                        <p class="book__author">
+                            Бернадак Мари-Лор
+                        </p>
+                    </div>
+                    <a class="book__link" href="/"></a>
+                    <button type="button" class="book__favorite active">
                         Добавить в избранное
                     </button>
                 </article>

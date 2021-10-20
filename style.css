@@ -232,6 +232,11 @@ header::before {
     margin-right: 26px;
 }
 
+.lk--active {
+    background: url("images/lk--active.svg") no-repeat center;
+    background-size: contain;
+}
+
 /* header */
 /* hero */
 .hero {
@@ -813,3 +818,165 @@ footer::after {
 }
 
 /* modal */
+/* user-lk */
+.user-lk {
+    padding-top: 96px;
+    background: var(--green-color);
+}
+
+.user-lk h1 {
+    color: #ffffff;
+    margin-top: 0;
+}
+
+/* user-lk */
+/* tabs */
+.tabs__buttons {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.tabs__button {
+    padding: 25px 0;
+    text-align: center;
+    width: 50%;
+    font-size: 24px;
+    color: #ffffff;
+    font-family: Circle, sans-serif;
+    transition: background-color 0.2s linear;
+}
+
+.tabs__button.active {
+    padding: 30px 0;
+    background: #ffffff;
+    color: #000000;
+}
+
+.tabs__button--profile {
+    background: var(--red-color);
+}
+
+.tabs__button--history {
+    background: var(--yellow-color);
+}
+
+.tabs__content {
+    display: none;
+    padding: 66px 23px 47px;
+    background: #ffffff;
+}
+
+.tabs__content.active {
+    display: block;
+}
+
+/* tabs */
+/* user-profile */
+.user-profile.active {
+    display: flex;
+}
+
+.user-profile__wrapper {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.user-profile img {
+    margin-right: 67px;
+}
+
+.user-profile input:disabled {
+    border: none;
+}
+
+.user-profile input {
+    /*width: 80%;*/
+}
+
+.user-profile__item {
+    /*display: flex;*/
+    font-family: Circle, sans-serif;
+    color: var(--brown-color);
+    margin-bottom: 30px;
+}
+
+.user-profile__title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.user-profile__value {
+    font-size: 24px;
+}
+
+.user-profile__value.edit {
+    border-bottom: 1px solid black;
+}
+
+.user-profile__name {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--brown-color);
+    margin-bottom: 28px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.user-profile__button {
+    background: var(--red-color);
+}
+
+/* user-profile */
+/* user-history */
+.user-history__book {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+.user-history__book img {
+    margin-right: 62px;
+}
+.user-history__wrapper {
+    display: flex;
+    flex-direction: column;
+    color: var(--brown-color);
+    font-size: 24px;
+}
+.user-history__title {
+    font-weight: bold;
+    margin-top: 0;
+}
+.user-history__item:not(:last-child) {
+    margin-bottom: 21px;
+}
+/* user-history */
+/*favorite-books*/
+.favorites-book {
+    padding-top: 37px;
+    margin-top: 0;
+    background: var(--brown-color);
+}
+
+.favorites-book .books__item:last-child .book__content,
+.favorites-book .books__item:nth-child(3) .book__content,
+.favorites-book .books__item:nth-child(5) .book__content {
+    background: var(--yellow-color);
+}
+
+.favorites-book__header h2{
+    color: #ffffff;
+}
+
+.favorites-book::after {
+    right: unset;
+    left: 100px;
+    background: var(--yellow-color);
+}
+
+.favorites-book::before {
+    background: var(--red-color);
+}
+
+/*favorite-books*/

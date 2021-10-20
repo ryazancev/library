@@ -12,8 +12,7 @@ const initSlider = () => {
         spaceBetween: 30,
         loop: true,
         slidesPerView: 4
-
-    })
+    });
 };
 initSlider();
 
@@ -62,6 +61,73 @@ const showModalLk = () => {
             closeModal();
         }
     });
-
 };
 showModalLk();
+
+const editUserProfile = () => {
+    const editButton = document.querySelector('.user-profile__button');
+    const editValues = document.querySelectorAll('.user-profile__value');
+    let isEdit;
+    const editValue = () => {
+        if (!isEdit) {
+            editValues.forEach(value => {
+                value.contentEditable = 'true';
+                value.classList.add('edit');
+            });
+            editButton.textContent = 'Сохранить';
+            return isEdit = true;
+        } else {
+            editValues.forEach(value => {
+                value.contentEditable = 'false';
+                value.classList.remove('edit');
+            });
+            editButton.textContent = 'Изменить';
+            return isEdit = false;
+        }
+    };
+
+    editButton.addEventListener('click', editValue);
+};
+editUserProfile();
+
+const tabs = () => {
+    const tabButtons = document.querySelectorAll('.tabs__button');
+    const tabContents = document.querySelectorAll('.tabs__content');
+
+    const changeTab = (e) => {
+        const target = e.target;
+        const dataTab = target.dataset.tab;
+
+        tabButtons.forEach(button => {
+            button.classList.remove('active');
+        })
+
+        target.classList.add('active');
+
+        tabContents.forEach(content => {
+            content.classList.remove('active');
+            if (content.dataset.content === dataTab) {
+                content.classList.add('active');
+            }
+        });
+    };
+    tabButtons.forEach(button => {
+        button.addEventListener('click', changeTab);
+    });
+};
+tabs();
+
+const deleteFavorite = () => {
+    const favoriteContainer = document.querySelector('.favorites-book');
+
+    const deleteBook = (e) => {
+        const target = e.target;
+        if (target.matches('.book__favorite')) {
+            target.classList.remove('active');
+            target.parentElement.remove();
+        }
+    };
+
+    favoriteContainer.addEventListener('click', deleteBook);
+};
+deleteFavorite();
