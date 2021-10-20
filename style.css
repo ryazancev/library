@@ -958,6 +958,11 @@ footer::after {
 .user-history__item:not(:last-child) {
     margin-bottom: 21px;
 }
+.user-history__item--dates {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 /* user-history */
 /*favorite-books*/
 .favorites-book {
